@@ -29,5 +29,5 @@ class Solution(object):
                         candidate = max(candidate, prices[j - 1] - prices[k - 1] + dp[i - 1][k - 1])
                     dp[i][j] = max(candidate, dp[i - 1][j], dp[i][j - 1])
 
-        print len(dp)
+        # print len(dp)
         return dp[-1][-1]
